@@ -10,10 +10,10 @@ We extended the original work along four directions:
 2. **Attack Method**
     Implemented additional attack methods and compared them with the original PGD attack. The implemented attacks are:
 
-   - **FGSM**
-   - **BIM**
-   - **PGD-RS**
-   - **FGSM-L2**
+   - FGSM
+   - BIM
+   - PGD-RS
+   - FGSM-L2
 
    We compare model performance before and after purification for each attack (original PGD vs. the new attacks).
 
