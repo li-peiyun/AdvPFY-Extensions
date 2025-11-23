@@ -18,7 +18,13 @@ We extended the original work along four directions:
    We compare model performance before and after purification for each attack (original PGD vs. the new attacks).
 
 3. **Purification Method**
-    *(Placeholder — details to be added)*
+    Implemented additional purification methods and compare them with the original methods. The purifications are:
+
+    - ConvAE
+    - MagNet-ConvAE
+    - DAE-Recon
+
+    We compare the results of the same adversarial samples(PGD attack).
 
 4. **Model**
     *(Placeholder — details to be added)*
@@ -49,7 +55,7 @@ Upload models and files to [purify_attack.ipynb](./purify_attack.ipynb):
 
 - **Attack Method Experiment:** In order to run a specific attack, edit the notebook to comment out the default PGD attack and uncomment the call to the new attack methodyou want to evaluate.
 
-- **Purification Method Experiment:**  *(Placeholder — details to be added)*
+- **Purification Method Experiment:**  You can directly run the notebook to observe the results of different purification methods.
 
 - **Model Experiment:**  *(Placeholder — details to be added)*
 
