@@ -8,7 +8,7 @@ We extended the original work along four directions:
     *(Placeholder — details to be added)*
 
 2. **Attack Method**
-    Implemented additional attack methods and compared them with the original PGD attack. The implemented attacks are:
+   Implemented additional attack methods and compared them with the original PGD attack. The implemented attacks are:
 
    - FGSM
    - BIM
@@ -27,7 +27,12 @@ We extended the original work along four directions:
     We compare the results of the same adversarial samples(PGD attack).
 
 4. **Model**
-    *(Placeholder — details to be added)*
+
+    Enhanced the ResNet50 backbone with Squeeze-and-Excitation (SE) Attention.
+
+    - **Architecture:** Use a **ResNet-VAE** structure, jointly trained for **CIFAR-10 classification** and **image reconstruction**. The VAE structure is crucial for the manifold-based purification step.
+
+    - **Encoder Enhancement:** The standard ResNet-50 encoder is modified by integrating **Squeeze-and-Excitation (SE) Blocks** after each of the four main residual layer sets ($\text{layer1}$ to $\text{layer4}$).
 
 ------
 
@@ -57,6 +62,12 @@ Upload models and files to [purify_attack.ipynb](./purify_attack.ipynb):
 
 - **Purification Method Experiment:**  You can directly run the notebook to observe the results of different purification methods.
 
-- **Model Experiment:**  *(Placeholder — details to be added)*
+- **Model Experiment:**  Change the original `nn_model` into `nn_model_se` using code below:
 
+  ```
+  # from model.nn_model import ResNetEnc, ResNetVAE
+  from model.nn_model_se import ResNetEnc, ResNetVAE
+  ```
+  
+  The `nn_model_se` can be find through path `model/nn_model_se.py`
   
