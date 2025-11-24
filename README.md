@@ -61,8 +61,8 @@ Upload models and files to [purify_attack.ipynb](./purify_attack.ipynb):
 
 - Run [purify_attack.ipynb](./purify_attack.ipynb) to perform experiments.
 - **Dataset Experiment:**
-- 'Train-Dataset.ipynb' integrates the training process of St-AE-CLF and VAE-CLF on 4 datasets (Fashion-MNIST, MNIST, SVHN, CIFAR-10). Since different dataset has different channel settings, it has already been defined in the 'Train-Dataset.ipynb' that the first 2 datasets use 'nn_model' and others use 'nn_model_2'.
-- Then download the generated files ended as '_clf.pth', eg. './fmnist_stae_clf.pth'. Upload them to 'Attack_PurifyTest-Dataset.ipynb' for further purification testing.
+   - `Train-Dataset.ipynb` integrates the training process of St-AE-CLF and VAE-CLF on 4 datasets (Fashion-MNIST, MNIST, SVHN, CIFAR-10). Since different dataset has different channel settings, it has already been defined in the `Train-Dataset.ipynb` that the first 2 datasets use 'nn_model' and others use `nn_model_2`.
+   - Then download the generated files ended as '_clf.pth', eg. `./fmnist_stae_clf.pth`. Upload them to `Attack_PurifyTest-Dataset.ipynb` for further purification testing.
 
 - **Attack Method Experiment:** In order to run a specific attack, edit the notebook to comment out the default PGD attack and uncomment the call to the new attack methodyou want to evaluate.
 
