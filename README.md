@@ -5,9 +5,13 @@ This repo contains extended experiments based on **"Adversarial Purification wit
 We extended the original work along four directions:
 
 1. **Dataset**
-    *(Placeholder — details to be added)*
+   Implemented PGD attack, St-AE-Classifier and VAE-Classifier to additional datasets besides Fashion-MNIST in the original demo.The additional datasets are:
 
-2. **Attack Method**
+   - MNIST
+   - SVHN
+   - CIFAR-10
+
+3. **Attack Method**
    Implemented additional attack methods and compared them with the original PGD attack. The implemented attacks are:
 
    - FGSM
@@ -17,7 +21,7 @@ We extended the original work along four directions:
 
    We compare model performance before and after purification for each attack (original PGD vs. the new attacks).
 
-3. **Purification Method**
+4. **Purification Method**
     Implemented additional purification methods and compare them with the original methods. The purifications are:
 
     - ConvAE
@@ -26,7 +30,7 @@ We extended the original work along four directions:
 
     We compare the results of the same adversarial samples(PGD attack).
 
-4. **Model**
+5. **Model**
 
     Enhanced the ResNet50 backbone with Squeeze-and-Excitation (SE) Attention.
 
@@ -56,7 +60,9 @@ Upload models and files to [purify_attack.ipynb](./purify_attack.ipynb):
 ### 3. Run attacks and purification
 
 - Run [purify_attack.ipynb](./purify_attack.ipynb) to perform experiments.
-- **Dataset Experiment:**  *(Placeholder — details to be added)*
+- **Dataset Experiment:**
+- 'Train-Dataset.ipynb' integrates the training process of St-AE-CLF and VAE-CLF on 4 datasets (Fashion-MNIST, MNIST, SVHN, CIFAR-10). Since different dataset has different channel settings, it has already been defined in the 'Train-Dataset.ipynb' that the first 2 datasets use 'nn_model' and others use 'nn_model_2'.
+- Then download the generated files ended as '_clf.pth', eg. './fmnist_stae_clf.pth'. Upload them to 'Attack_PurifyTest-Dataset.ipynb' for further purification testing.
 
 - **Attack Method Experiment:** In order to run a specific attack, edit the notebook to comment out the default PGD attack and uncomment the call to the new attack methodyou want to evaluate.
 
